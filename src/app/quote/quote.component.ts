@@ -14,3 +14,20 @@ export class QuoteComponent implements OnInit {
     new Quote('Zig Ziglar','What you get by achieving your goals is not as important as what you become by achieving your goals.',new Date(2018,6,12)),
     new Quote('Carol Burnett','When you have a dream, you have got to grab it and never let go.',new Date(2019,10,18)),
     ];
+    addNewQuote(quote){
+      quote.completeDate = new Date(quote.completeDate)
+      this.quotes.push(quote)
+    }
+    displayDetails(index){
+      this.quotes[index].showQuotes = !this.quotes[index].showQuotes;
+    }
+    deleteQuote(isComplete, index){
+      if(isComplete){
+        let toDelete=confirm('Are you sure you wanna delete'+ this.quotes[index] .inspquote +'?')
+    
+        if(toDelete){
+          this.quotes.splice(index,1)
+        }
+      }
+    
+    }
