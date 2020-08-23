@@ -11,3 +11,12 @@
             </div>
             {{newQuote.name}}
         </div>
+        <div class="form-group">
+
+            <label for="quote">Quote</label>
+            <textarea class="form-control" id="quote" rows="4" [(ngModel)]="newQuote.inspquote" name="inspquote" #inspquote="ngModel" required></textarea>
+            <div [hidden]="inspquote.valid || inspquote.pristine" class="alert alert-danger">
+                <p>Quote is required</p>
+            </div>
+
+        </div>
