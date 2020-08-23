@@ -6,6 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./quote-form.component.css']
 })
 export class QuoteFormComponent implements OnInit {
+  newQuote = new Quote("", "", new Date());
+
+  @Output() AddQuote = new EventEmitter<Quote>();
+
+   submitQuote(){
+   this.AddQuote.emit(this.newQuote);
+
+  this.newQuote = new Quote("","",new Date());
+   }
 
   constructor() { }
 
