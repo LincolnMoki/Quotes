@@ -7,7 +7,13 @@
       font-family: pacifico,cursive;
       padding:20px;
   }
-  
+  body {
+    background-image:url(https://cdn.pixabay.com/photo/2019/09/29/22/06/light-bulb-4514505_960_720.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: rgb(245, 240, 240);
+}
+
   h1{
     font-size: 100px;
     font-family: 'Spicy Rice', cursive;
@@ -16,6 +22,7 @@
     padding: 10px;
     text-shadow:0 10px white;
 }
+
 
 .jumbotron{
     border-radius: 30px;
