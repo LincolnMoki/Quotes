@@ -20,3 +20,16 @@
             </div>
 
         </div>
+
+       
+        <div class="form-group">
+            <label for="author">Who said..</label>
+            <input type='text' id="author" placeholder="Quote author" [(ngModel)]="newQuote.author" name="author" #author="ngModel" required>
+            <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
+                <p> Author is required</p>
+            </div>
+
+        </div>
+        <button type ="submit" class='btn btn-success' required >Post</button>
+    </form>
+</div>
